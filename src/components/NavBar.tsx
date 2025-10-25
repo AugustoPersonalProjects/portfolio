@@ -28,14 +28,14 @@ export default function NavBar() {
     }));
   }, [pathname]);
 
-  // Otimização: Animação simplificada para mobile
+  // CORREÇÃO: Definição correta das variantes com tipagem TypeScript
   const mobileMenuVariants = {
     closed: {
       opacity: 0,
       height: 0,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
+        ease: "easeInOut" as const // Adicionar 'as const' para fixar o tipo
       }
     },
     open: {
@@ -43,7 +43,7 @@ export default function NavBar() {
       height: "auto",
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: "easeOut" as const // Adicionar 'as const' para fixar o tipo
       }
     }
   };
@@ -87,7 +87,6 @@ export default function NavBar() {
               </motion.div>
             ))}
 
-            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }} 

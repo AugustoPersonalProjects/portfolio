@@ -10,9 +10,12 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meu Portfolio",
-  description: "Meu portfolio pessoal",
-};
+  title: 'Portfolio',
+  description: 'Meu portfolio',
+  icons: {
+    icon: '/favicon.ico',
+  },
+}
 
 export default function RootLayout({
   children,

@@ -44,7 +44,7 @@ export default function Hero() {
                    hover:bg-emerald-950"
                 >
                   <Download size={20} />
-                  Download
+                  Baixar CV
                 </motion.a>
 
                 <div className="flex items-center gap-4">
