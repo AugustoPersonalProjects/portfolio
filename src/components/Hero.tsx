@@ -41,7 +41,7 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full lg:w-auto bg-emerald-400 text-gray-900 py-3 px-6
                   rounded-full flex items-center justify-center gap-2
-                   hover:bg-emerald-300"
+                   hover:bg-emerald-950"
                 >
                   <Download size={20} />
                   Download
@@ -56,7 +56,7 @@ export default function Hero() {
                       rel="noopener noreferrer"
                       className="w-10 h-10 border border-gray-800 rounded-full flex
                           items-center justify-center text-gray-400
-                          hover:text-emerald-400 hover:border-emerald-400 transition-colors"
+                          hover:text-emerald-950 hover:border-emerald-950 transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -64,7 +64,6 @@ export default function Hero() {
                     </motion.a>
                   ))}
                 </div>
-                
               </div>
             </motion.div>
 
@@ -81,19 +80,19 @@ export default function Hero() {
                 <motion.div
                   animate={{
                     rotate: 360,
-                    scale: [1, 1.05, 1]
+                    scale: [1, 1.05, 1],
                   }}
                   transition={{
                     duration: 8,
                     ease: "linear",
-                    repeat: Infinity
+                    repeat: Infinity,
                   }}
                   className="absolute inset-0 rounded-full border-2 border-emerald-400/20"
                 />
 
                 <motion.div
                   animate={{
-                    scale: [1, 1.1, 1]
+                    scale: [1, 1.1, 1],
                   }}
                   transition={{
                     duration: 3,
@@ -107,7 +106,7 @@ export default function Hero() {
                 <motion.div
                   animate={{
                     rotate: -360,
-                    scale: [1, 1.02, 1]
+                    scale: [1, 1.02, 1],
                   }}
                   transition={{
                     duration: 10,
@@ -128,18 +127,18 @@ export default function Hero() {
           </div>
 
           <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="grid gap-8 mt-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="grid gap-8 mt-20"
           >
             {stats.map((stat, index) => (
-             <div key={index} className="flex items-center gap-4">
+              <div key={index} className="flex items-center gap-4">
                 <h2 className="text-4xl font-bold text-emerald-400">
-                    <CountUp value={Number(stat.number)} />
-                </h2>   
+                  <CountUp value={Number(stat.number)} />
+                </h2>
                 <p className="text-gray-400 text-sm">{stat.text}</p>
-             </div>
+              </div>
             ))}
           </motion.div>
         </div>

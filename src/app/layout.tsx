@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import{JetBrains_Mono} from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400","700"],
-  variable: "--font-jetbrains-mono"
+  weight: ["400", "700"],
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata: Metadata = {
   title: "Meu Portfolio",
-  description:"Meu portfolio pessoal",
+  description: "Meu portfolio pessoal",
 };
 
 export default function RootLayout({
