@@ -21,7 +21,7 @@ export default function NavBar() {
               animate={{ opacity: 1, x: 0 }}
               className="text-2xl font-bold text-white"
             >
-              Augusto<span className="text-emerald-400">.</span>Inc
+              Augusto<span className="text-emerald-400">.</span>Lopes
             </motion.div>
           </Link>
 
