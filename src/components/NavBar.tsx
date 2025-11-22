@@ -52,7 +52,6 @@ export default function NavBar() {
     <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-lg border-b border-gray-800/50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" onClick={closeMenu}>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -63,7 +62,6 @@ export default function NavBar() {
             </motion.div>
           </Link>
 
-          {/* Menu Desktop - Mantendo o efeito de click original */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item, index) => (
               <motion.div
@@ -95,8 +93,6 @@ export default function NavBar() {
               Me Contrate
             </motion.button>
           </div>
-
-          {/* Botão Mobile - Otimizado */}
           <button
             className="md:hidden text-white p-2 hover:text-emerald-400 transition-colors"
             onClick={toggleMenu}
@@ -105,8 +101,6 @@ export default function NavBar() {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
-        {/* Menu Mobile - Otimizado */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -141,7 +135,6 @@ export default function NavBar() {
                   </motion.div>
                 ))}
                 
-                {/* Botão CTA Mobile */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ 

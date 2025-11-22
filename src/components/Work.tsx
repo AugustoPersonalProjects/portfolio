@@ -62,7 +62,6 @@ export default function Work() {
   return (
     <section className="min-h-screen bg-gray-950 text-white pt-20 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +78,6 @@ export default function Work() {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
           {projectsWithVideos.map((project, index) => (
             <motion.div
@@ -92,7 +90,6 @@ export default function Work() {
               onMouseLeave={() => setHoveredProject(null)}
               className="group relative bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-emerald-400/30 transition-all duration-500"
             >
-              {/* Project Media - Imagem ou Vídeo */}
               <div className="relative h-80 overflow-hidden">
                 {project.videoId ? (
                   // Container do vídeo
@@ -102,7 +99,6 @@ export default function Work() {
                       title={project.title}
                     />
 
-                    {/* Badge de Vídeo - POSICIONADO CORRETAMENTE */}
                     <div className="absolute top-4 left-4 z-20">
                       <div className="flex items-center gap-2 bg-emerald-400 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
                         <Play size={16} fill="currentColor" />
@@ -119,19 +115,16 @@ export default function Work() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    {/* Overlay Gradient para imagens */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
                   </>
                 )}
 
-                {/* Project Number - ATRÁS dos botões */}
                 <div className="absolute top-6 left-6 z-0">
                   <span className="text-6xl font-bold text-emerald-400/20">
                     {project.number}
                   </span>
                 </div>
 
-                {/* BOTÕES DE AÇÃO - COM z-index ALTO E SEM OVERLAY BLOQUEADOR */}
                 <div className="absolute top-6 right-6 z-30 flex gap-3">
                   {project.githubLink && (
                     <motion.a
@@ -147,7 +140,6 @@ export default function Work() {
                     </motion.a>
                   )}
 
-                  {/* Botão Demo ou YouTube */}
                   {project.videoId ? (
                     <motion.a
                       href={`https://youtube.com/watch?v=${project.videoId}`}
@@ -177,7 +169,6 @@ export default function Work() {
                 </div>
               </div>
 
-              {/* Project Content - ÁREA CLICÁVEL SEPARADA */}
               <div className="p-8 relative z-10">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-emerald-400 transition-colors duration-300">
                   {project.title}
@@ -187,7 +178,6 @@ export default function Work() {
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -199,7 +189,6 @@ export default function Work() {
                   ))}
                 </div>
 
-                {/* LINKS CLICÁVEIS NA PARTE INFERIOR */}
                 <div className="flex gap-4 flex-wrap">
                   {project.githubLink && (
                     <motion.a
@@ -243,13 +232,11 @@ export default function Work() {
                 </div>
               </div>
 
-              {/* Animated Border Effect - SEM BLOQUEAR CLIQUES */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-emerald-400/0 via-emerald-400/10 to-emerald-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </div>
 
-        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -287,7 +274,6 @@ export default function Work() {
           </div>
         </motion.div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

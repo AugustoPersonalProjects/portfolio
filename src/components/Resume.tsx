@@ -42,14 +42,14 @@ export default function Resume() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.15 }}
-                className="flex flex-col sm:flex-row gap-4 p-4 md:p-6 bg-white dark:bg-gray-800 rounded-xl md:rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+                className="flex flex-col sm:flex-row gap-4 p-4 md:p-6 bg-white dark:bg-gray-800 rounded-xl md:rounded-2xl shadow-lg border border-gray-100
+               dark:border-gray-700 hover:shadow-xl transition-all duration-300"
               >
-                {/* Ícone */}
-                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg md:rounded-xl flex items-center justify-center text-white font-bold text-base md:text-lg">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg md:rounded-xl flex items-center 
+                justify-center text-white font-bold text-base md:text-lg">
                   {education.title.charAt(0)}
                 </div>
 
-                {/* Conteúdo */}
                 <div className="flex-grow">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
                     <h3 className="text-lg md:text-xl font-semibold">{education.title}</h3>
@@ -84,7 +84,8 @@ export default function Resume() {
                 }}
                 className="group relative"
               >
-                <div className="relative z-10 flex flex-col items-center p-2 md:p-3 bg-gradient-to-br from-emerald-950 to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl md:rounded-2xl shadow-md group-hover:shadow-xl transition-all duration-300">
+                <div className="relative z-10 flex flex-col items-center p-2 md:p-3 bg-gradient-to-br from-emerald-950 to-gray-50 dark:from-gray-800
+                 dark:to-gray-900 rounded-xl md:rounded-2xl shadow-md group-hover:shadow-xl transition-all duration-300">
                   <div className="w-10 h-10 md:w-14 md:h-14 mb-2 md:mb-3">
                     <Image
                       src={skill.icon}
@@ -98,8 +99,8 @@ export default function Resume() {
                     {skill.name}
                   </span>
                 </div>
-                {/* Efeito de brilho no hover - apenas desktop */}
-                <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
+                <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 
+                group-hover:opacity-20 blur-md transition-opacity duration-300" />
               </motion.div>
             ))}
           </div>
@@ -108,7 +109,6 @@ export default function Resume() {
         return (
           <div className="max-w-4xl mx-auto lg:ml-auto">
             <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-              {/* Coluna principal */}
               <div className="space-y-4 md:space-y-6">
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,6 @@ export default function Resume() {
                   {resumeData.about.description}
                 </motion.p>
 
-                {/* Timeline pessoal */}
                 <div className="space-y-3 md:space-y-4">
                   <h3 className="text-lg md:text-xl font-semibold text-emerald-400">
                     Minha Jornada
@@ -147,9 +146,7 @@ export default function Resume() {
                 </div>
               </div>
 
-              {/* Coluna lateral */}
               <div className="space-y-4 md:space-y-6">
-                {/* Interesses */}
                 <div className="bg-gray-900 rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-800">
                   <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-emerald-400">
                     Interesses
@@ -169,7 +166,6 @@ export default function Resume() {
                   </div>
                 </div>
 
-                {/* Metas */}
                 <div className="bg-gray-900 rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-800">
                   <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-emerald-400">
                     Metas 2025/2026
@@ -198,9 +194,7 @@ export default function Resume() {
   return (
     <section className="min-h-screen bg-gray-950 text-white pt-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-        {/* Layout mobile: coluna única */}
         <div className="block lg:hidden space-y-8">
-          {/* Header mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -214,7 +208,6 @@ export default function Resume() {
             </p>
           </motion.div>
 
-          {/* Tabs mobile - horizontal scroll */}
           <div className="overflow-x-auto pb-2">
             <div className="flex space-x-2 min-w-max">
               {ExperienceTabs.map((tab, index) => (
@@ -236,7 +229,6 @@ export default function Resume() {
             </div>
           </div>
 
-          {/* Content mobile */}
           <div className="pt-4">
             <AnimatePresence mode="wait">
               <motion.div
@@ -252,9 +244,7 @@ export default function Resume() {
           </div>
         </div>
 
-        {/* Layout desktop: grid lateral */}
         <div className="hidden lg:grid lg:grid-cols-[280px,1fr] gap-8 lg:gap-12">
-          {/* Sidebar */}
           <div className="space-y-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -283,8 +273,7 @@ export default function Resume() {
               ))}
             </div>
           </div>
-
-          {/* Content */}
+          
           <div className="lg:pl-4">
             <motion.h2
               initial={{ opacity: 0, x: 20 }}
