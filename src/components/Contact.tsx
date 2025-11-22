@@ -29,10 +29,10 @@ export default function Contact() {
     setIsSubmitting(true);
     try {
       await emailjs.send(
-        "SEU_SERVICO_ID",
-        "SEU_TEMPLATE_ID",
+        "service_ak3cm9a",
+        "template_smkvd4e",
         data,
-        "SEU_PUBLIC_KEY"
+        "3FnUpIJjrQWD6voD7"
       );
       reset();
       alert("Mensagem Enviada com Sucesso!");
@@ -46,7 +46,6 @@ export default function Contact() {
   return (
     <section className="min-h-screen bg-gray-950 text-white pt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,7 +63,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* INFORMÇÕES DE CONTATO */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -82,7 +80,6 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Cards de Informação */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -103,7 +100,6 @@ export default function Contact() {
                 </motion.div>
               ))}
 
-              {/* Localização */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -120,7 +116,6 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              {/* Disponibilidade */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -140,7 +135,6 @@ export default function Contact() {
               </motion.div>
             </div>
 
-            {/* Redes Sociais */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -177,7 +171,6 @@ export default function Contact() {
             </motion.div>
           </motion.div>
 
-          {/* FORMULÁRIO */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -185,7 +178,6 @@ export default function Contact() {
             className="bg-gray-900 rounded-3xl p-8 md:p-10 border border-gray-800"
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              {/* Nome e Sobrenome */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -200,7 +192,8 @@ export default function Contact() {
                     {...register("firstName", {
                       required: "Primeiro nome é obrigatório",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none
+                     focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
                     placeholder="Seu primeiro nome"
                   />
                   {errors.firstName && (
@@ -223,7 +216,8 @@ export default function Contact() {
                     {...register("lastName", {
                       required: "Sobrenome é obrigatório",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none
+                     focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
                     placeholder="Seu sobrenome"
                   />
                   {errors.lastName && (
@@ -234,7 +228,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email e Telefone */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -253,7 +246,8 @@ export default function Contact() {
                         message: "E-mail inválido",
                       },
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none
+                     focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
                     placeholder="seu@email.com"
                   />
                   {errors.email && (
@@ -274,13 +268,14 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     {...register("phone")}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none
+                     focus:border-emerald-400 
+                    focus:ring-1 focus:ring-emerald-400 transition-colors"
                     placeholder="(11) 99999-9999"
                   />
                 </div>
               </div>
 
-              {/* Tipo de Oportunidade */}
               <div>
                 <label
                   htmlFor="opportunity"
@@ -291,7 +286,8 @@ export default function Contact() {
                 <select
                   id="opportunity"
                   {...register("opportunity")}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-emerald-400 focus:ring-1
+                   focus:ring-emerald-400 transition-colors"
                 >
                   <option value="">Selecione o tipo de oportunidade</option>
                   <option value="full-time">Tempo Integral</option>
@@ -302,7 +298,6 @@ export default function Contact() {
                 </select>
               </div>
 
-              {/* Mensagem */}
               <div>
                 <label
                   htmlFor="message"
@@ -316,7 +311,8 @@ export default function Contact() {
                   {...register("message", {
                     required: "Mensagem é obrigatória",
                   })}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none
+                   focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors resize-none"
                   placeholder="Conte-me sobre a oportunidade ou como posso contribuir com sua empresa..."
                 />
                 {errors.message && (
@@ -326,13 +322,13 @@ export default function Contact() {
                 )}
               </div>
 
-              {/* Botão de Envio */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-emerald-400 text-gray-900 py-4 px-8 rounded-xl font-semibold hover:bg-emerald-300 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                className="w-full bg-emerald-400 text-gray-900 py-4 px-8 rounded-xl font-semibold hover:bg-emerald-300 transition-colors 
+                duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
               >
                 {isSubmitting ? (
                   <>
