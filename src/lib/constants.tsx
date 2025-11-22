@@ -1,4 +1,4 @@
-import { Github, Linkedin, Code2, Palette, Database, Brain, Phone, Mail, Cloud } from "lucide-react";
+import { Github, Linkedin, Code, Code2, Palette, BookOpen, Database, Brain, Phone, Mail, Cloud } from "lucide-react";
 
 export const socialLinks = [
   { icon: <Github size={20} />, href: "https://github.com/lopeslyra10" },
@@ -18,6 +18,14 @@ export const menuItems = [
   { title: "Resumo", path: "/resume" },
   { title: "Projetos", path: "/works" },
   { title: "Contato", path: "/contact" },
+];
+
+export const timelineData = [
+  { icon: Code, text: "Desenvolvimento Full-Stack", color: "text-blue-400" },
+  { icon: Database, text: "APIs RESTful & Banco de Dados", color: "text-purple-400" },
+  { icon: Cloud, text: "Cloud Computing & DevOps", color: "text-emerald-400" },
+  { icon: Brain, text: "Soluções Inovadoras", color: "text-orange-400" },
+  { icon: BookOpen, text: "Gestão de Projetos & Modelos de Negócio", color: "text-yellow-400" },
 ];
 
 export const services = [
@@ -146,13 +154,13 @@ export const skillsData = [
 export const projects = [
   {
     number: "01",
-    title: "Portal AutoCare",
+    title: "go-webApp",
     description:
-      "Plataforma phygital desenvolvida para a Porto Seguro, integrando serviços automotivos com diagnóstico digital e atendimento físico.",
-    image: "/work/autocare.png",
-    technologies: ["HTML5", "CSS", "JavaScript"],
+      "Plataforma de gerenciamento de produtos, desenvolvida durante Formação Linguagem Go, da Alura, com fins acadêmicos.",
+    image: "/work/TelaProdutosGO.png",
+    technologies: ["HTML5", "GO"],
     demoLink: "#",
-    githubLink: "https://github.com/AugustoPersonalProjects/portal-academico-front",  
+    githubLink: "https://github.com/AugustoPersonalProjects/go-webApp",  
   },
   {
     number: "02",
@@ -176,23 +184,23 @@ export const projects = [
   },
   {
     number: "04",
-    title: "Know Your Fan",
+    title: "SkillTrack - Back-End",
     description:
-      "Aplicação web gamificada desenvolvida para a FURIA, com quiz de arquétipos de fãs e classificação baseada em perfis comportamentais.",
-    image: "/work/furia.png",
-    technologies: ["React", "Vite", "Tailwind", "TypeScript"],
+      "O SkillTrack é uma aplicação desenvolvida em Java Spring Boot para o acompanhamento e gestão do desenvolvimento profissional.",
+    image: "/work/TelaDeLoginSkilltrack.png",
+    technologies: ["Java", "Spring-Boot", "Spring-Boot JPA", "Flyway", "HATEOAS"],
     demoLink: "#",
-    githubLink: "https://github.com/lopeslyra10/furia-know-your-fan",
+    githubLink: "https://github.com/AugustoPersonalProjects/SkillTrack",
   },
   {
     number: "05",
-    title: "Fun Chat - FURIA",
+    title: "SkillTrack - Front-End",
     description:
-      "Chatbot temático para fãs de eSports da FURIA, com integração a quiz e respostas interativas em tempo real.",
-    image: "/work/funchat.png",
-    technologies: ["React", "Vite", "Tailwind", "Node.js", "Framer Motion"],
+      "Aplicação web gamificada desenvolvida para a gerenciamento de skills.",
+    image: "/work/TelaDeSkillsSkilltrack.png",
+    technologies: ["React", "Next.js", "Tailwind", "Node.js", "Framer Motion"],
     demoLink: "#",
-    githubLink: "https://github.com/lopeslyra10/furia-fun-chat",
+    githubLink: "https://github.com/AugustoPersonalProjects/SkillTrack-FrontEnd",
   },
 ];
 
